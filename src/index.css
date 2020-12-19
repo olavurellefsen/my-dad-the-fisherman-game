@@ -10,7 +10,10 @@ div.menu .menu-item.tile.tile-centered {
 .menu.hero-list {
   z-index: inherit;
   transform: none;
-  min-height: 500px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 60px;
 }
 
 footer {

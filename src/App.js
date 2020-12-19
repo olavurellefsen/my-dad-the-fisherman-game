@@ -16,8 +16,18 @@ const GAME_DURATION = 4000 * 60 * 2; // 2 minutes
 const initialState = {
   // we initialize the state by populating the bench with a shuffled collection of heroes
   Óflokkað: shuffle(HEROES),
-  [COMICS.DC]: [],
-  [COMICS.MARVEL]: [],
+  [COMICS.MSY]: [],
+  [COMICS.fodiketa]: [],
+  [COMICS.burdardygg_fiskiveiða]: [],
+  [COMICS.fiskastovnar]: [],
+  [COMICS.ovurfiskari]: [],
+  [COMICS.veidiloyvi]: [],
+  [COMICS.hjaveida]: [],
+  [COMICS.utblak]: [],
+  [COMICS.fiskiloyvi]: [],
+  [COMICS.umsitingaraetlan]: [],
+  [COMICS.brafeingisveidibann]: [],
+  [COMICS.stongdar_leidir]: [],
   gameState: GAME_STATE.READY,
   timeLeft: 0,
 };
@@ -103,20 +113,78 @@ class App extends React.Component {
             <>
               <DragDropContext onDragEnd={this.onDragEnd}>
                 <FlexContainer>
+                <Dropzone id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
                   <FlexColumn >
                     <Dropzone
-                      id={COMICS.MARVEL}
-                      color="olive"
-                      heroes={this.state[COMICS.MARVEL]}
+                      id={COMICS.MSY}
+                      heroes={this.state[COMICS.MSY]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
 
                     />
-                    <Dropzone id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
                     <Dropzone
-                      id={COMICS.DC}
-                      color="steelblue"
-                      heroes={this.state[COMICS.DC]}
+                      id={COMICS.fodiketa}
+                      heroes={this.state[COMICS.fodiketa]}
+                      isDropDisabled={isDropDisabled}
+                      gameState={gameState}
+                    />
+                    <Dropzone
+                      id={COMICS.burdardygg_fiskiveiða}
+                      heroes={this.state[COMICS.burdardygg_fiskiveiða]}
+                      isDropDisabled={isDropDisabled}
+                      gameState={gameState}
+                    />
+                    <Dropzone
+                      id={COMICS.fiskastovnar}
+                      heroes={this.state[COMICS.fiskastovnar]}
+                      isDropDisabled={isDropDisabled}
+                      gameState={gameState}
+                    />
+                    <Dropzone
+                      id={COMICS.ovurfiskari}
+                      heroes={this.state[COMICS.ovurfiskari]}
+                      isDropDisabled={isDropDisabled}
+                      gameState={gameState}
+                    />
+                    <Dropzone
+                      id={COMICS.veidiloyvi}
+                      heroes={this.state[COMICS.veidiloyvi]}
+                      isDropDisabled={isDropDisabled}
+                      gameState={gameState}
+                    />
+                    <Dropzone
+                      id={COMICS.hjaveida}
+                      heroes={this.state[COMICS.hjaveida]}
+                      isDropDisabled={isDropDisabled}
+                      gameState={gameState}
+                    />
+                    <Dropzone
+                      id={COMICS.utblak}
+                      heroes={this.state[COMICS.utblak]}
+                      isDropDisabled={isDropDisabled}
+                      gameState={gameState}
+                    />
+                    <Dropzone
+                      id={COMICS.fiskiloyvi}
+                      heroes={this.state[COMICS.fiskiloyvi]}
+                      isDropDisabled={isDropDisabled}
+                      gameState={gameState}
+                    />
+                    <Dropzone
+                      id={COMICS.umsitingaraetlan}
+                      heroes={this.state[COMICS.umsitingaraetlan]}
+                      isDropDisabled={isDropDisabled}
+                      gameState={gameState}
+                    />
+                    <Dropzone
+                      id={COMICS.brafeingisveidibann}
+                      heroes={this.state[COMICS.brafeingisveidibann]}
+                      isDropDisabled={isDropDisabled}
+                      gameState={gameState}
+                    />
+                    <Dropzone
+                      id={COMICS.stongdar_leidir}
+                      heroes={this.state[COMICS.stongdar_leidir]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
                     />
@@ -141,7 +209,7 @@ class App extends React.Component {
 const FlexContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   align-self: stretch;
 `
@@ -150,11 +218,10 @@ const FlexColumn = styled.div`
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   align-self: stretch;
-  ${media.tablet`
-    flex-direction: column;
-  `}
+  flex-wrap: wrap;
+
 `
 
 export default App;
