@@ -8,7 +8,7 @@ const PopupHero = ({ name, rank, description, selectedHero, setSelectedHero }) =
     <ContainerStyle show={selectedHero === name}>
       <FlexStyle>
         <RowStyle>
-          <HeeaderStyle>{`${name}`}</HeeaderStyle>
+          <HeeaderStyle>{name}</HeeaderStyle>
           <ButtonStyle onClick={() => { setSelectedHero("") }}><FontAwesomeIcon icon={faTimes} /></ButtonStyle>
         </RowStyle>
         <p>{description}</p>

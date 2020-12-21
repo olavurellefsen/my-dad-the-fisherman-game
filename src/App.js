@@ -218,9 +218,7 @@ const FlexColumn = styled.div`
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
-  align-self: stretch;
   flex-wrap: wrap;
-  border-right: 2px solid black;
 `
 
 export default App;
