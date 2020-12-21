@@ -56,7 +56,7 @@ const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
           <div className="content h6">
             {' '}
             {gameState === GAME_STATE.READY
-              ? `Hála og slepp ymsu forkláringarnar í bólkarnar.`
+              ? `Hála og slepp ymsu forkláringarnar í tilhoyrandi yvirskrift`
               : `Tú fekk: ${totalScore} stig, har ið tíðsbonusið taldi ${totalScore > 0 ? timeBonus : 0} stig. Tú fekst ${score} fyri at seta forkláringarnar í tilhoyrandi yvirskift.`}
           </div>
         </div>
