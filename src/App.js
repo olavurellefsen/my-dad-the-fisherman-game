@@ -8,7 +8,6 @@ import Dropzone from './components/Dropzone';
 import Footer from './components/Footer';
 import Highscore from './components/Highscore';
 import styled from 'styled-components';
-import { media } from '../src/utils/mediaTemplate'
 
 
 const GAME_DURATION = 4000 * 60 * 2; // 2 minutes

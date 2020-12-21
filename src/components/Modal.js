@@ -50,14 +50,14 @@ const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
       <div className="modal-overlay" />
       <div className="modal-container">
         <div className="modal-header">
-          <div className="modal-title h4">Fiskaflokkingarspæl</div>
+          <div className="modal-title h4">Spæl til "My dad the fisherman"</div>
         </div>
         <div className="modal-body">
           <div className="content h6">
             {' '}
             {gameState === GAME_STATE.READY
-              ? `Hála og slepp ymsu fiskarnar í báðar bólkarnar.`
-              : `Tú fekk: ${totalScore} stig, har ið tíðsbonusið taldi ${totalScore > 0 ? timeBonus : 0} stig. Tú fekst ${score} fyri at seta fiskarnar í tilhoyrandi kassar og í røttu raðfylgju.`}
+              ? `Hála og slepp ymsu forkláringarnar í bólkarnar.`
+              : `Tú fekk: ${totalScore} stig, har ið tíðsbonusið taldi ${totalScore > 0 ? timeBonus : 0} stig. Tú fekst ${score} fyri at seta forkláringarnar í tilhoyrandi yvirskift.`}
           </div>
         </div>
         <div className="modal-footer">

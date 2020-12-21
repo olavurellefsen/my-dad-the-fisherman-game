@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Droppable, Draggable } from 'react-beautiful-dnd'
 import styled from 'styled-components'
-import { media } from '../utils/mediaTemplate'
 import PopupHero from './PopupHero'
 
 const Dropzone = ({ isDropDisabled, heroes, id, endGame, gameState, color }) => {
@@ -56,8 +55,8 @@ const Hero = ({ name, color, rank, description, comics, index, gameState,
           >
             <TextStyle onClick={() => {
               setSelectedHero(name)
-            }} title={description} className="tile-content" color={gameState === "review" ? "white" : "black"}>
-              {gameState === "review" ? `${rank}. ${name}` : name}
+            }} title={description} className="tile-content">
+              {name}
             </TextStyle>
             {gameState === "review" &&
               <PopupHero name={name} rank={rank} description={description}
@@ -87,8 +86,7 @@ const HeroStyle = styled.div`
 `
 
 const TextStyle = styled.div`
-  background-color: ${props => props.background_color};
-  color: ${props => props.color};
+  color: black;
 `
 
 const HeroSubContainerStyle = styled.div`
