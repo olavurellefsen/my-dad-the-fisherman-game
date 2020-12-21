@@ -29,12 +29,13 @@ function calculateScore(groupedHeroes, comics) {
 
   )
 
-  return groupedHeroes.reduce((score, { name, rank }, index) => {
+
+  return groupedHeroes ? groupedHeroes.reduce((score, { name, rank }, index) => {
     const maxPoint = getMaxPoints()
     const heroIndex = correctOrder.findIndex((hero) => hero.rank === rank && hero.name === name)
     const penalty = heroIndex >= 0 ? Math.abs(index - heroIndex) : maxPoint
     return score + (maxPoint - penalty)
-  }, 0)
+  }, 0) : null
 }
 
 export function getMaxPoints() {

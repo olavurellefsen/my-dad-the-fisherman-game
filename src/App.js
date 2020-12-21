@@ -18,7 +18,7 @@ const initialState = {
   Óflokkað: shuffle(HEROES),
   [COMICS.MSY]: [],
   [COMICS.fodiketa]: [],
-  [COMICS.burdardygg_fiskiveiða]: [],
+  [COMICS.burdardygg_fiskiveida]: [],
   [COMICS.fiskastovnar]: [],
   [COMICS.ovurfiskari]: [],
   [COMICS.veidiloyvi]: [],
@@ -94,7 +94,7 @@ class App extends React.Component {
   render() {
     const { gameState, timeLeft, Óflokkað, ...groups } = this.state;
     const isDropDisabled = gameState === GAME_STATE.DONE || gameState === GAME_STATE.REVIEW;
-
+    console.log("tfgdf", this.state[COMICS.burdardygg_fiskiveida])
     return (
       <>
         <Header gameState={gameState} timeLeft={timeLeft} endGame={this.endGame} />
@@ -113,7 +113,7 @@ class App extends React.Component {
             <>
               <DragDropContext onDragEnd={this.onDragEnd}>
                 <FlexContainer>
-                <Dropzone id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
+                  <Dropzone id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
                   <FlexColumn >
                     <Dropzone
                       id={COMICS.MSY}
@@ -129,8 +129,8 @@ class App extends React.Component {
                       gameState={gameState}
                     />
                     <Dropzone
-                      id={COMICS.burdardygg_fiskiveiða}
-                      heroes={this.state[COMICS.burdardygg_fiskiveiða]}
+                      id={COMICS.burdardygg_fiskiveida}
+                      heroes={this.state[COMICS.burdardygg_fiskiveida]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
                     />
