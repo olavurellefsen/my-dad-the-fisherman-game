@@ -72,14 +72,14 @@ const Hero = ({ name, color, rank, description, comics, index, gameState,
 const HeroContainerStyle = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
+  width: 160px;
   margin: 20px;
 `
 const HeroStyle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   margin-top: 20px;
   border: dotted black 1px;

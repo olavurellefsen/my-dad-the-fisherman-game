@@ -93,7 +93,7 @@ class App extends React.Component {
   render() {
     const { gameState, timeLeft, Óflokkað, ...groups } = this.state;
     const isDropDisabled = gameState === GAME_STATE.DONE || gameState === GAME_STATE.REVIEW;
-    console.log("tfgdf", this.state[COMICS.burdardygg_fiskiveida])
+
     return (
       <>
         <Header gameState={gameState} timeLeft={timeLeft} endGame={this.endGame} />
@@ -112,7 +112,6 @@ class App extends React.Component {
             <>
               <DragDropContext onDragEnd={this.onDragEnd}>
                 <FlexContainer>
-                  <Dropzone id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
                   <FlexColumn >
                     <Dropzone
                       id={COMICS.MSY}
@@ -188,6 +187,8 @@ class App extends React.Component {
                       gameState={gameState}
                     />
                   </FlexColumn>
+                <Dropzone id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
+
                 </FlexContainer>
               </DragDropContext>
               <Highscore />
@@ -207,20 +208,19 @@ class App extends React.Component {
 
 const FlexContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
+  align-items: flex-start;
+  flex-direction: row;
   align-self: stretch;
 `
 
 const FlexColumn = styled.div`
   display: flex;
   align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: flex-start;
+  flex-direction: row;
   align-self: stretch;
   flex-wrap: wrap;
-
+  border-right: 2px solid black;
 `
 
 export default App;
