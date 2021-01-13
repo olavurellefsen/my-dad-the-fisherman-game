@@ -4,15 +4,17 @@ import gql from 'graphql-tag'
 import { useSubscription } from '@apollo/client'
 
 const GET_SCORES = gql`
-  subscription GetScores($email: String!) {
-    fob_game(
-      where: { email: { _eq: $email } }
-      order_by: { updated_at: desc }
-    ) {
+subscription GetScores($email: String!) {
+  fob_game(where:
+    {
+      email: {_eq: $email},
+      game_type: {_eq: "my-dad-the-fisherman"}},
+    order_by: {updated_at: desc}) {
       updated_at
       points
-    }
   }
+}
+
 `
 
 const HighScore = () => {

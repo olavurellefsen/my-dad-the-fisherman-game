@@ -5,13 +5,19 @@ import { useMutation } from '@apollo/client'
 import { useAuth0 } from '@auth0/auth0-react'
 
 const INSERT_FOB_GAME = gql`
-  mutation InsertFobGame($points: numeric!, $email: String!) {
-    insert_fob_game(objects: { points: $points, email: $email }) {
-      returning {
-        id
-      }
+mutation InsertFobGame($points: numeric!, $email: String!) {
+  insert_fob_game(objects:
+    {
+      points: $points,
+      email: $email,
+      game_type: "my-dad-the-fisherman"
+    }) {
+    returning {
+      id
     }
   }
+}
+
 `
 
 const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
