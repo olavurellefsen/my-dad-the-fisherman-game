@@ -3,11 +3,12 @@ import { Droppable, Draggable } from 'react-beautiful-dnd'
 import styled from 'styled-components'
 import PopupHero from './PopupHero'
 
-const Dropzone = ({ isDropDisabled, heroes, id, endGame, gameState, color }) => {
+const LabelsContainer = ({ isDropDisabled, heroes, id, endGame, gameState, color }) => {
   const [selectedHero, setSelectedHero] = useState("")
 
   return (
     <HeroContainerStyle>
+    <div style={{ marginTop: "20px", borderBottom: `${gameState === "review" ? `10px ${color} solid` : ""}` }}>{id}</div>
       {endGame && heroes.length === 0 && (
         <button className="btn btn-default" onClick={endGame}>
           Enda spælið
@@ -35,7 +36,6 @@ const Dropzone = ({ isDropDisabled, heroes, id, endGame, gameState, color }) => 
           )
         }}
       </Droppable>
-      <div style={{ marginTop: "20px", borderBottom: `${gameState === "review" ? `10px ${color} solid` : ""}` }}>{id}</div>
     </HeroContainerStyle>
   )
 }
@@ -91,4 +91,4 @@ const TextStyle = styled.div`
 
 const HeroSubContainerStyle = styled.div`
 `
-export default Dropzone
+export default LabelsContainer
