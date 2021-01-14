@@ -68,7 +68,7 @@ class App extends React.Component {
     }
     if (this.state.gameState === GAME_STATE.PLAYING) {
       this.setState({
-        gameState: GAME_STATE.REVIEW
+        gameState: GAME_STATE.DONE
       });
     } else {
       this.setState({
@@ -189,7 +189,7 @@ class App extends React.Component {
                       gameState={gameState}
                     />
                   </FlexColumn>
-                <LabelsContainer id="Yvirskriftir" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
+                <LabelsContainer id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
 
                 </FlexContainer>
               </DragDropContext>
@@ -221,6 +221,8 @@ const FlexColumn = styled.div`
   justify-content: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
+  max-height: 80vh;
+  overflow-y: scroll;
 `
 
 const TitleStyle = styled.h1`

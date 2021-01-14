@@ -82,7 +82,8 @@ const HeroStyle = styled.div`
   flex-direction: column;
   width: 100%;
   margin-top: 20px;
-  border: dotted black 1px;
+  border-radius: 20px;
+  background-color: ${props => (props.color )};
 `
 
 const TextStyle = styled.div`

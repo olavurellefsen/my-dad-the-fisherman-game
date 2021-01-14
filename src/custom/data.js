@@ -17,61 +17,73 @@ export const HEROES = [
     comics: COMICS.MSY,
     name: "Mest varandi úrtøka (MSY)",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.fodiketa,
     name: "Føðiketa",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.burdardygg_fiskiveida,
     name: "Burðardygg fiskiveiða",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.fiskastovnar,
     name: "Fiskastovnur",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.ovurfiskari,
     name: "Ovurfiskarí",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.veidiloyvi,
     name: "Veiðiloyvi",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.hjaveida,
     name: "Hjáveiða",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.utblak,
     name: "Útblak",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.fiskiloyvi,
     name: "Fiskiloyvi",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.umsitingaraetlan,
     name: "Umsitingarætlan",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.brafeingisveidibann,
     name: "Bráfeingisveiðibann",
     rank: 0,
+    color: '#d0d0d0',
   },
   {
     comics: COMICS.stongdar_leidir,
     name: "Stongdar leiðir",
     rank: 0,
+    color: '#d0d0d0',
   },
 
 
