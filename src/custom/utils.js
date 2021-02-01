@@ -71,7 +71,7 @@ export function getNumberOfGrouping(groupedHeroes, comics) {
     debugger
 
     const heroIndex = correctOrder.findIndex((hero) => hero.name === name)
-    score += heroIndex >= 0 ? + 1 : - 1
+    score += heroIndex >= 0 ? + 1 : 0
     return score
   }, 0)
 }
