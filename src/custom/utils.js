@@ -66,9 +66,7 @@ export function getNumberOfGrouping(groupedHeroes, comics) {
       a.rank < b.rank ? -1 : 1
 
   )
-  debugger
   return groupedHeroes.reduce((score, { name }, index) => {
-    debugger
 
     const heroIndex = correctOrder.findIndex((hero) => hero.name === name)
     score += heroIndex >= 0 ? + 1 : 0
