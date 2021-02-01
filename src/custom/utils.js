@@ -47,6 +47,36 @@ export function getTimeBonus(timeLeft) {
   return Math.round(getSeconds(timeLeft) / 10, 0)
 }
 
+
+
+export function getGroupings(groups) {
+  const maxPoint = getMaxPoints()
+
+  const gameScore = Object.values(COMICS).reduce(
+    (sum, comicsName) => sum + getNumberOfGrouping(groups[comicsName], comicsName),
+    0
+  )
+  return `Tú fekst ${gameScore} bólkingar rættar út av ${maxPoint}`
+}
+
+
+export function getNumberOfGrouping(groupedHeroes, comics) {
+  const correctOrder = HEROES.filter((hero) => hero.comics === comics).sort(
+    (a, b) =>
+      a.rank < b.rank ? -1 : 1
+
+  )
+  debugger
+  return groupedHeroes.reduce((score, { name }, index) => {
+    debugger
+
+    const heroIndex = correctOrder.findIndex((hero) => hero.name === name)
+    score += heroIndex >= 0 ? + 1 : - 1
+    return score
+  }, 0)
+}
+
+
 export function getTotalScore(groups, timeLeft) {
   console.log(groups)
   const gameScore = getScore(groups)

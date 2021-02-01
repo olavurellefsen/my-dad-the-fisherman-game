@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import gql from 'graphql-tag'
-import { GAME_STATE, getScore, getTimeBonus, getTotalScore } from '../custom/utils'
+import { GAME_STATE, getGroupings, getScore, getTimeBonus, getTotalScore } from '../custom/utils'
 import { useMutation } from '@apollo/client'
 import { useAuth0 } from '@auth0/auth0-react'
 
@@ -27,6 +27,9 @@ const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
   const [totalScore, setTotalScore] = useState(0)
   const [timeBonus, setTimeBonus] = useState(0)
   const [score, setScore] = useState(0)
+  const [correctAnwsers, setCorrectAnswers] = useState("")
+
+
   useEffect(() => {
     const doInsertFobGame = async (groups, timeLeft) => {
       try {
@@ -49,6 +52,7 @@ const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
     setTotalScore(getTotalScore(groups, timeLeft))
     setTimeBonus(getTimeBonus(timeLeft))
     setScore(getScore(groups))
+    setCorrectAnswers(getGroupings(groups))
   }, [groups, timeLeft])
 
   return (
@@ -63,7 +67,7 @@ const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
             {' '}
             {gameState === GAME_STATE.READY
               ? `Hála og slepp ymsu yvirskriftunum til hóskandi frágreiðingina`
-              : `Tú fekk: ${totalScore} stig, har ið tíðsbonusið taldi ${totalScore > 0 ? timeBonus : 0} stig. Tú fekst ${score} fyri at seta yvirskriftir á frágeriðingarnar.`}
+              : `Tú fekk: ${totalScore} stig, har ið tíðsbonusið taldi ${totalScore > 0 ? timeBonus : 0} stig. Tú fekst ${score} fyri at seta yvirskriftir á frágeriðingarnar.  ${correctAnwsers}. Tú spældi í ${Math.floor((4000 * 60 * 2 - timeLeft) / 1000)} sekund.`}
           </div>
         </div>
         <div className="modal-footer">
