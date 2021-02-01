@@ -48,6 +48,7 @@ export function getTimeBonus(timeLeft) {
 }
 
 export function getTotalScore(groups, timeLeft) {
+  console.log(groups)
   const gameScore = getScore(groups)
   const timeBonus = getTimeBonus(timeLeft)
   return gameScore ? gameScore + timeBonus : 0

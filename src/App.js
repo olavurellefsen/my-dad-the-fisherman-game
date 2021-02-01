@@ -5,6 +5,7 @@ import { shuffle, getTimeLeft, move, GAME_STATE } from './custom/utils';
 import Modal from './components/Modal';
 import Header from './components/Header';
 import Dropzone from './components/Dropzone';
+import LabelsContainer from './components/LabelsContainer';
 import Footer from './components/Footer';
 import Highscore from './components/Highscore';
 import styled from 'styled-components';
@@ -67,7 +68,7 @@ class App extends React.Component {
     }
     if (this.state.gameState === GAME_STATE.PLAYING) {
       this.setState({
-        gameState: GAME_STATE.REVIEW
+        gameState: GAME_STATE.DONE
       });
     } else {
       this.setState({
@@ -97,7 +98,7 @@ class App extends React.Component {
     return (
       <>
         <Header gameState={gameState} timeLeft={timeLeft} endGame={this.endGame} />
-        <TitleStyle>Hála forkláringarnar í tí yvirskriftina, ið tú heldur passar til</TitleStyle>
+        <TitleStyle>Hála yviskriftinar yvir til frágreiðingina, ið tú heldur passar til</TitleStyle>
         {(this.state.gameState !== GAME_STATE.PLAYING && this.state.gameState !== GAME_STATE.REVIEW) && (
           <Modal
             startGame={this.startGame}
@@ -188,7 +189,7 @@ class App extends React.Component {
                       gameState={gameState}
                     />
                   </FlexColumn>
-                <Dropzone id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
+                <LabelsContainer id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
 
                 </FlexContainer>
               </DragDropContext>
@@ -220,6 +221,8 @@ const FlexColumn = styled.div`
   justify-content: flex-start;
   flex-direction: row;
   flex-wrap: wrap;
+  max-height: 80vh;
+  overflow-y: scroll;
 `
 
 const TitleStyle = styled.h1`
