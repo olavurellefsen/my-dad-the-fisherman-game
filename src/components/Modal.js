@@ -22,7 +22,7 @@ mutation InsertFobGame($points: numeric!, $email: String!) {
 
 const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
   const [insertFobGame] = useMutation(INSERT_FOB_GAME)
-  const { isAuthenticated, user, loginWithRedirect } = useAuth0()
+  const { isAuthenticated, user } = useAuth0()
 
   const [totalScore, setTotalScore] = useState(0)
   const [timeBonus, setTimeBonus] = useState(0)
@@ -67,7 +67,7 @@ const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
           </div>
         </div>
         <div className="modal-footer">
-          {!isAuthenticated && gameState === GAME_STATE.READY && (
+          {/* {!isAuthenticated && gameState === GAME_STATE.READY && (
             <button
               className="btn btn-default"
               onClick={loginWithRedirect}
@@ -75,7 +75,7 @@ const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
             >
               Logga inn
             </button>
-          )}
+          )} */}
           <button
             className="btn btn-primary"
             onClick={gameState === GAME_STATE.READY ? startGame : resetGame}
