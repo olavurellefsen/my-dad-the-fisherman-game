@@ -16,7 +16,6 @@ const GAME_DURATION = 4000 * 60 * 2; // 2 minutes
 const initialState = {
   // we initialize the state by populating the bench with a shuffled collection of heroes
   Óflokkað: shuffle(HEROES),
-  [COMICS.MSY]: [],
   [COMICS.fodiketa]: [],
   [COMICS.burdardygg_fiskiveida]: [],
   [COMICS.fiskastovnar]: [],
@@ -98,7 +97,7 @@ class App extends React.Component {
     return (
       <>
         <Header gameState={gameState} timeLeft={timeLeft} endGame={this.endGame} />
-        <TitleStyle>Hála yviskriftinar yvir til frágreiðingina, ið tú heldur passar til</TitleStyle>
+        <TitleStyle>Drag orðini til røttu orðafrágreiðingina.</TitleStyle>
         {(this.state.gameState !== GAME_STATE.PLAYING && this.state.gameState !== GAME_STATE.REVIEW) && (
           <Modal
             startGame={this.startGame}
@@ -115,13 +114,6 @@ class App extends React.Component {
               <DragDropContext onDragEnd={this.onDragEnd}>
                 <FlexContainer>
                   <FlexColumn >
-                    <Dropzone
-                      id={COMICS.MSY}
-                      heroes={this.state[COMICS.MSY]}
-                      isDropDisabled={isDropDisabled}
-                      gameState={gameState}
-
-                    />
                     <Dropzone
                       id={COMICS.fodiketa}
                       heroes={this.state[COMICS.fodiketa]}
