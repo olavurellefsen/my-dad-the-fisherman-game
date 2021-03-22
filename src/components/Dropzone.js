@@ -39,7 +39,7 @@ const Dropzone = ({ isDropDisabled, heroes, id, endGame, gameState, color }) => 
     </HeroContainerStyle>
   )
 }
-const Hero = ({ name, color, rank, description, comics, index, gameState,
+const Hero = ({ name, color, rank, description, index, gameState,
   selectedHero, setSelectedHero }) => {
   return (
     <Draggable key={index} draggableId={name} index={index}>
@@ -84,6 +84,13 @@ const HeroStyle = styled.div`
   margin-top: 20px;
   border-radius: 20px;
   background-color: ${props => (props.color )};
+  ${({ review, color }) =>
+    review && color &&
+    `
+    background-color: ${color};
+    color: white;
+
+    `}
 `
 
 const TextStyle = styled.div`

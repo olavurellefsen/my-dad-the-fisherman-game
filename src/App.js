@@ -67,7 +67,7 @@ class App extends React.Component {
     }
     if (this.state.gameState === GAME_STATE.PLAYING) {
       this.setState({
-        gameState: GAME_STATE.DONE
+        gameState: GAME_STATE.REVIEW
       });
     } else {
       this.setState({
@@ -75,6 +75,7 @@ class App extends React.Component {
       });
     }
   };
+
 
   resetGame = () => {
     this.setState(initialState);
@@ -119,69 +120,80 @@ class App extends React.Component {
                       heroes={this.state[COMICS.fodiketa]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#76d077'
                     />
                     <Dropzone
                       id={COMICS.burdardygg_fiskiveida}
                       heroes={this.state[COMICS.burdardygg_fiskiveida]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#4500ffa3'
                     />
                     <Dropzone
                       id={COMICS.fiskastovnar}
                       heroes={this.state[COMICS.fiskastovnar]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#eb5424'
                     />
                     <Dropzone
                       id={COMICS.ovurfiskari}
                       heroes={this.state[COMICS.ovurfiskari]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#44c7f4'
                     />
                     <Dropzone
                       id={COMICS.veidiloyvi}
                       heroes={this.state[COMICS.veidiloyvi]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#8a6d3bad'
                     />
                     <Dropzone
                       id={COMICS.hjaveida}
                       heroes={this.state[COMICS.hjaveida]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#8a3b40ad'
                     />
                     <Dropzone
                       id={COMICS.utblak}
                       heroes={this.state[COMICS.utblak]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#8a3b7ead'
                     />
                     <Dropzone
                       id={COMICS.fiskiloyvi}
                       heroes={this.state[COMICS.fiskiloyvi]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#5bffe5ad'
                     />
                     <Dropzone
                       id={COMICS.umsitingaraetlan}
                       heroes={this.state[COMICS.umsitingaraetlan]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#ff880075'
                     />
                     <Dropzone
                       id={COMICS.brafeingisveidibann}
                       heroes={this.state[COMICS.brafeingisveidibann]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#ffe60075'
                     />
                     <Dropzone
                       id={COMICS.stongdar_leidir}
                       heroes={this.state[COMICS.stongdar_leidir]}
                       isDropDisabled={isDropDisabled}
                       gameState={gameState}
+                      color='#d0d0d0'
                     />
                   </FlexColumn>
-                <LabelsContainer id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
+                  <LabelsContainer id="Óflokkað" heroes={Óflokkað} isDropDisabled={isDropDisabled} endGame={this.endGame} gameState={gameState} />
 
                 </FlexContainer>
               </DragDropContext>
