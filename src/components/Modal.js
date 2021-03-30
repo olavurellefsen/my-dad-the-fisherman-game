@@ -62,7 +62,7 @@ const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
       <div className="modal-overlay" />
       <div className="modal-container">
         <div className="modal-header">
-          <div className="modal-title h4">Spæl til "Pápi mín er fiskimaður"</div>
+          <div className="modal-title h4">Pápi mín er fiskimaður</div>
         </div>
         <div className="modal-body">
           <div className="content h6">
