@@ -7,7 +7,7 @@ export const COMICS = {
   hjaveida: "Tá ið fiskiskip fiska fiskasløg ella djórasløg, sum tey ikki ætla ella ikki hava loyvi at taka.",
   utblak: "Tann partur av veiðuni, sum verður blakaður fyri borð, deyður ella livandi.",
   fiskiloyvi: "Ein rættur, sum eigari av ávísum fiskifari fær, at veiða fiskasløg á ávísum leiðum í einum fiskiári.",
-  umsitingaraetlan: 'Ein avtala millum myndugleikar og vinnu um, hvussu fiskiskapurin skal skipast tey næstu árini (Havstovan 2014).',
+  umsitingaraetlan: 'Ein avtala millum myndugleikar og vinnu um, hvussu fiskiskapurin skal skipast tey næstu árini.',
   brafeingisveidibann: "Ein tíðaravmarkað steinging av einum øki, tá ið ábendingar eru um ov nógvan ungfisk.",
   stongdar_leidir: "Verður brúkt til at verja gýtingarøki, ungfisk ella fyri at skilja reiðskapir sundir."
 };
