@@ -1,15 +1,15 @@
 export const COMICS = {
   fodiketa: 'Sambandið millum alt livandi tilfeingi á jørðini, og at djór eta hvørt annað.',
   burdardygg_fiskiveida: "Tá ið fiskað verður við ábyrgd. At tað ikki verður tikið ov nógv úr stovninum.",
-  fiskastovnar: "Eitt fiskaslag, sum hevur felagseyðkenni, t.d. vøkstur, tilgongd, fiskideyða.",
+  fiskastovnar: "Eitt fiskaslag, sum hevur felags eyðkenni, t.d. vøkstur, tilgongd, fiskideyða.",
   ovurfiskari: "Tá ið ov nógv verður fiskað úr stovninum, soleiðis at hann ikki klárar at endurnýggja seg.",
-  veidiloyvi: "Ein góðkenning, sum fiskifør fáa frá myndugleikunum, fyri at hava loyvi at fiska.",
+  veidiloyvi: "Ein góðkenning, sum fiskifør fáa frá myndugleikunum fyri at hava loyvi at fiska.",
   hjaveida: "Tá ið fiskiskip fiska fiskasløg ella djórasløg, sum tey ikki ætla ella ikki hava loyvi at taka.",
   utblak: "Tann partur av veiðuni, sum verður blakaður fyri borð, deyður ella livandi.",
-  fiskiloyvi: "Ein rættur, sum eigari av ávísum fiskifari fær, at veiða fiskasløg á ávísum leiðum í einum fiskiári.",
+  fiskiloyvi: "Ein rættur, sum eigari av ávísum fiskifari fær at fiska á ávísum leiðum í einum fiskiári.",
   umsitingaraetlan: 'Ein avtala millum myndugleikar og vinnu um, hvussu fiskiskapurin skal skipast tey næstu árini.',
-  brafeingisveidibann: "Ein tíðaravmarkað steinging av einum øki, tá ið ábendingar eru um ov nógvan ungfisk.",
-  stongdar_leidir: "Verður brúkt til at verja gýtingarøki, ungfisk ella fyri at skilja reiðskapir sundir."
+  brafeingisveidibann: "Øki, sum verður stongt í tíðaravmarkaða tíð.",
+  stongdar_leidir: "Verður brúkt til at verja gýtingarøki, ungfisk ella fyri at skilja reiðskapir sundur."
 };
 
 
