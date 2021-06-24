@@ -10,7 +10,7 @@ const Dropzone = ({ isDropDisabled, heroes, id, endGame, gameState, color }) => 
     <HeroContainerStyle>
       {endGame && heroes.length === 0 && (
         <button className="btn btn-default" onClick={endGame}>
-          Enda spælið
+          Enda
         </button>
       )}
       <Droppable droppableId={id} isDropDisabled={isDropDisabled}>

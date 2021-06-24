@@ -69,7 +69,7 @@ const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
             {' '}
             {gameState === GAME_STATE.READY
               ? `Drag orðini til røttu orðafrágreiðingina.`
-              : `${correctAnwsers}. Tú spældi í ${Math.floor((4000 * 60 * 2 - timeLeft) / 1000)} sekund.`}
+              : `${correctAnwsers}. Tú loysti uppgávuna í ${Math.floor((4000 * 60 * 2 - timeLeft) / 1000)} sekund.`}
           </div>
         </div>
         <div className="modal-footer">
@@ -87,8 +87,8 @@ const Modal = ({ gameState, groups, startGame, timeLeft, resetGame }) => {
             onClick={gameState === GAME_STATE.READY ? startGame : resetGame}
           >
             {gameState === GAME_STATE.READY
-              ? 'Byrja spælið'
-              : 'Spæl av nýggjum'}
+              ? 'Byrja'
+              : 'Byrja av nýggjum'}
           </button>
         </div>
       </div>
